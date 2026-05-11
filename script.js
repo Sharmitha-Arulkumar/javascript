@@ -1,3 +1,5 @@
+//Task 1
+
 //Section 1: Variables 
 
 //Q1
@@ -177,6 +179,186 @@ console.log(true && false || true);   //Ans: true
 
 
 
+
+//Task 2 - Type Casting & Flow Control
+
+//1. Output and datatype
+
+console.log("10" + 5);                      //105
+console.log(typeof("10" + 5));              //string
+console.log(10 + true);                     //11
+console.log(typeof(10 + true));             //number
+console.log(false + null);                  //0
+console.log(typeof(false + null));          //number
+console.log("Hello" + undefined);           //Helloundefined
+console.log(typeof("Hello" + undefined));   //string
+console.log([1,2] + 5);                     //1,25
+console.log(typeof([1,2] + 5));             //string
+
+
+//2. Implicit Type Casting - examples
+
+//1: string + number
+
+console.log("Hi" + 5);                      //Hi5
+console.log(typeof("Hi" + 5));              //string
+
+//2: boolean + number
+
+console.log(false + 5);                    //5
+console.log(typeof(false + 5));            //number
+
+//3: array + string
+
+console.log([0,1,2,3] + "4");              //0,1,2,34
+console.log(typeof([0,1,2,3] + "4"));      //string
+
+//4: object + number
+
+console.log({a:"5"} + 1);                  //[object Object]1
+console.log(typeof({a:"5"} + 1));          //string
+
+//5: null + number
+console.log(null + 3);                     //3
+console.log(typeof(null + 3));             //number
+
+
+//3. Explicit Type Casting
+
+//convert the following into number: 
+// "500"  true  false  null  "abc"  [100]
+
+console.log(Number("500"));                //500
+console.log(Number(true));                 //1
+console.log(Number(false));                //0
+console.log(Number(null));                 //0
+console.log(Number("abc"));                //NaN
+console.log(Number([100]));                //100
+
+
+//4. Boolean Constructor
+
+//check wheather the below values are true or false using boolean().
+// ""  "javascript"  0  1  null  undefined [] {}
+
+console.log(Boolean(""));                 //false
+console.log(Boolean("javascript"));       //true
+console.log(Boolean(0));                  //false
+console.log(Boolean(1));                  //true
+console.log(Boolean(null));               //false
+console.log(Boolean(undefined));          //false
+console.log(Boolean([]));                 //true
+console.log(Boolean({}));                 //true
+
+
+//5. Student Pass or Fail
+
+let mark = 45;
+if(mark > 35){
+    console.log("Pass");
+
+}else{
+    console.log("Fail");
+    
+}
+    
+
+//6. Voting Eligibility
+
+let age = 20;
+if(age >= 18){
+    console.log("Eligible");
+    
+}else{
+    console.log("Not Eligible");
+    
+}
+
+//7. Greatest Number
+
+let n1 = 50;
+let n2 = 80;
+let n3 = 30;
+if(n1 > n2 && n1 > n3){
+    console.log("n1 is greater");
+    
+}else if(n2 > n1 && n2 > n3){
+    console.log("n2 is greater");
+    
+}else if(n3 > n1 && n3 > n2){
+    console.log("n3 is greater");
+    
+}
+
+
+//8. Traffic Light System
+// using switch statement
+
+let trafficLight = "red";
+switch (trafficLight) {
+    case "red": console.log("Stop");
+    
+        break;
+    case "yellow": console.log("Ready");
+    
+        break;
+    case "green": console.log("Go");
+    
+        break;    
+    default: console.log("Happy Journey");
+    
+        break;
+}
+    
+
+//9. Login System
+ 
+let userName = "admin";
+let password = "1234";
+if(userName === "admin"){
+    if(password === "1234"){
+        console.log("Login Success");
+        
+    }else{
+        console.log("Invalid Login");
+        
+    }
+}else{
+    console.log("invalid login");
+    
+}
+
+
+//10. Session Finder
+
+let hour = 14;
+if(hour >= 1 && hour <= 12){
+    console.log("Morning");
+    
+}else if(hour >= 13 && hour <= 15){
+    console.log("Afternoon");
+    
+}else if(hour >= 16 && hour <= 19){
+    console.log("Evening");
+    
+}else if(hour >= 20 && hour <= 24){
+    console.log("Night");
+    
+}else{
+    console.log("Check given time");
+    
+}
+
+
+//Bonus Challenge
+
+//console.log(true + true)    ===> 2
+//console.log("5" - 2)        ===> 3
+//console.log("5" + 2)        ===> 52
+//console.log(null + 1)       ===> 1
+//console.log(undefined + 1)  ===> undefined1
+//console.log(Boolean(" "))   ===> false
+//console.log(Number(true))   ===> 1
 
 
 
