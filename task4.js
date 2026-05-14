@@ -156,22 +156,20 @@ restOp(1,2,3,4)                          //      10
 // Features: Add student, Print students, Calculate marks, Add bonus marks
 
 
-function name(...name){
-    return "Name:",name[0] ;
-    return "Name:",name[1] ;
+function name(name){
+    return "Name:",name;
 }                                       
 
-function marks(a,b,c) {
-    return "Marks:",a+b+c;
-    
+function marks(...a) {
+    return "Marks:",a[0]+a[1]+a[2];
 }
-function calculateMarks(callback,m1,m2,m3) {
-   return callback(m1,m2,m3);
+
+function calculateMarks(callback,...m) {
+   return callback(...m);
 }
 
 function bonusMark(bonus) {
     return "BonusMarks:",bonus;
-    
 }
 
 function sD() {
@@ -182,7 +180,7 @@ function sD() {
   }
   let sD2 = {  
    name2: name("Ram"),
-   marks2: calculateMarks(marks,88,95,92),
+   marks2: calculateMarks(marks,89,95,83),
    bonusMark2: bonusMark(10)
   }
   let totalSD = {...sD1,...sD2};
@@ -190,4 +188,5 @@ function sD() {
 }
 sD()
 
+// Ans : {name1:'Rahul', marks1:266,bonusMark1:9,name2:'Ram', marks2:267,bonusMark2:10}
 
