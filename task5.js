@@ -142,10 +142,10 @@ bookTicket("Aladdin",4,200,payment)
 // Order Confirmed, Preparing Food, Out for Delivery, Delivered
 
 function*foodDeliveryTracker() {
-    yield "Order Confirmed"
-    yield "Preparing Food"
-    yield "Out for Delivery"
-    yield "Delivered"
+    yield "Order Confirmed";
+    yield "Preparing Food";
+    yield "Out for Delivery";
+    yield "Delivered";
 }
 let tracker = foodDeliveryTracker();
 console.log(tracker.next().value);
