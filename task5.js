@@ -53,7 +53,7 @@ if (usersName === "admin"){
         alert("Wrong Password");
     }
 }else {
-  //  alert("Invalid Username");
+    alert("Invalid Username");
 }
 
 // 5. Traffic Signal System
